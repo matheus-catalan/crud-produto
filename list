@@ -1,0 +1,23 @@
+
+   ErrorException  : Array to string conversion
+
+  at C:\projetosLaravel\crud\vendor\laravel\framework\src\Illuminate\Routing\ResourceRegistrar.php:364
+    360|     protected function getResourceAction($resource, $controller, $method, $options)
+    361|     {
+    362|         $name = $this->getResourceRouteName($resource, $method, $options);
+    363| 
+  > 364|         $action = ['as' => $name, 'uses' => $controller.'@'.$method];
+    365| 
+    366|         if (isset($options['middleware'])) {
+    367|             $action['middleware'] = $options['middleware'];
+    368|         }
+
+  Exception trace:
+
+  1   Illuminate\Foundation\Bootstrap\HandleExceptions::handleError("Array to string conversion", "C:\projetosLaravel\crud\vendor\laravel\framework\src\Illuminate\Routing\ResourceRegistrar.php", ["gravar", "index", "gravar.index"])
+      C:\projetosLaravel\crud\vendor\laravel\framework\src\Illuminate\Routing\ResourceRegistrar.php:364
+
+  2   Illuminate\Routing\ResourceRegistrar::getResourceAction("gravar", ["ProdutoController@store"], "index", [])
+      C:\projetosLaravel\crud\vendor\laravel\framework\src\Illuminate\Routing\ResourceRegistrar.php:181
+
+  Please use the argument -v to see more details.
