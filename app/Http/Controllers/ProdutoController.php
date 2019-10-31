@@ -11,6 +11,7 @@ class ProdutoController extends Controller
     private $produto;
 
     public function __construct(Produto $produto){
+       
         $this -> produto = $produto;   
     }
     public function home(){
