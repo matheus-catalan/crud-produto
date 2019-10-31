@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Produto;
-
-
+use Illuminate\Support\Facades\Log;
 
 class ProdutoController extends Controller
 {
@@ -20,6 +19,7 @@ class ProdutoController extends Controller
 
     public function index(Produto $produto){
        $produtos =  $this -> produto -> all();
+       Log::info('teste');
        return view('listProduto', compact('produtos'));  
     }
 
